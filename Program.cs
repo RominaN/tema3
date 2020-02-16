@@ -77,21 +77,23 @@ namespace Tema3
             int[] vector = { 5, 8, 10, 12, 6, 18, 20 };
             Console.WriteLine("Vectorul initial este:");
             for (int i = 0; i < vector.Length; i++)
-                   {
-                        Console.Write(vector[i].ToString() + "\t");
-                    }
-            double doubleNumber = 10.2;
-            for (int i = 0; i < vector.Length; i++)
-                {
-                    vector[i]+=(int)doubleNumber;
-                }
-            Console.WriteLine();
-            Console.WriteLine("Vectorul dupa adunare este:");
-            for (int i = 0; i < vector.Length; i++)
             {
                 Console.Write(vector[i].ToString() + "\t");
             }
-            
+
+            double doubleNumber = 10.2;
+
+            double[] vector2 = new double[vector.Length];
+            for (int i = 0; i < vector.Length; i++)
+            {
+                vector2[i] = vector[i] + doubleNumber;
+            }
+            Console.WriteLine();
+            Console.WriteLine("Vectorul dupa adunare este:");
+            for (int i = 0; i < vector2.Length; i++)
+            {
+                Console.Write(vector2[i].ToString() + "\t");
+            }
         }
 	}
 
